@@ -7,7 +7,7 @@
   require_once("conf.php");
 
   $conn = mysqli_connect($db_host,$db_user,$db_password, $db_db);
-  $retour=$conn->query("SELECT Nom, Duree, Tarif FROM livraisons ");
+  $retour=$conn->query("SELECT ID, Nom, Duree, Tarif FROM livraisons ");
 
 
 
