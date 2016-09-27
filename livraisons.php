@@ -1,4 +1,4 @@
-<?php 
+<?php
   session_start();
   if($_SESSION['id'] == NULL){
     header('Location: index.php');
@@ -25,15 +25,15 @@
               </tr>
             </thead>
             <tbody>
-              <?php 
+              <?php
                 foreach ($retour as $key => $value) {
                   $chaine="<tr>";
                   $chaine.="<td>".$value['Nom']."</td>";
                   $chaine.="<td>".$value['Duree']."</td>";
-                  $chaine.="<td>".$value['Tarif']."</td>";
+                  $chaine.="<td>".$value['Tarif']."€</td>";
                   $chaine.="</tr>";
                   echo $chaine;
-                 } 
+                 }
               ?>
             </tbody>
           </table>
