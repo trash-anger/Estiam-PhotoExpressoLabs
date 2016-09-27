@@ -21,9 +21,8 @@
               <tr>
                 <th>Nom de livraison</th>
                 <th>Durée de livraison</th>
-                <th >Tarif</th>
+                <th>Tarif</th>
                 <th>
-
                 </th>
               </tr>
             </thead>
@@ -34,7 +33,7 @@
                   $chaine.="<td>".$value['Nom']."</td>";
                   $chaine.="<td>".$value['Duree']."</td>";
                   $chaine.="<td>".$value['Tarif']."€</td>";
-                  $chaine.='<td><a href="scripts/delete.php?id='.$value['ID'].'">Supprimer</a></td>';
+                  $chaine.='<td><a href="scripts/delete.php?id='.$value['ID'].'" class="btn btn-success">Supprimer</a></td>';
                   $chaine.="</tr>";
                   echo $chaine;
                  }
