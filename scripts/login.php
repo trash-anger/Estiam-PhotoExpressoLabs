@@ -4,7 +4,7 @@
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
 
-  require_once("./conf.php");
+  require_once("conf.php");
 
   session_start();
 
@@ -19,20 +19,18 @@
     $stmt->bind_param('s', $mail);
 
     $stmt->execute();
-
     /* Association des variables de résultat */
     $stmt->bind_result($idDB, $mailDB, $passwordDB, $lastnameDB, $firstnameDB);
-
     /* Lecture des valeurs */
     while ($stmt->fetch()) {
       if($mail == $mailDB && $password == $passwordDB){
         $_SESSION['id']  = $idDB;
         $_SESSION['firstname'] = $firstnameDB;
         $_SESSION['lastname'] = $lastnameDB;
-        $_SESSION['email'] = $emailDB;
-        header('Location: ../utilisateurs.php');    
+        $_SESSION['email'] = $mailDB;
+        echo 'test';
       } else {
-        header('Location: ../index.php');
+        echo 'BAd login';
       }
     }
   } else {
