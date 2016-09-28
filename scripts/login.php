@@ -28,9 +28,9 @@
         $_SESSION['firstname'] = $firstnameDB;
         $_SESSION['lastname'] = $lastnameDB;
         $_SESSION['email'] = $mailDB;
-        echo 'test';
+        echo 'ok';
       } else {
-        echo 'BAd login';
+        echo 'nok';
       }
     }
   } else {

@@ -10,7 +10,7 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <h2>Connexion</h2>
-          <form action="#" onsubmit="preventDefault(); submitMyForm();" method="post">
+          <form action="#" onsubmit="return submitMyForm();" method="post">
             <div class="form-group">
               <label class="control-label" for="mail"> Email : </label>
               <input type="email" id="mail" name="mail" placeholder="Email" class="form-control" required>
