@@ -5,20 +5,29 @@ var imgnum = 1;
 button1.onclick = function(){
   if(imgnum > 1){
     imgnum -= 1;
-    img.setAttribute('src', 'media/img'+imgnum+'.jpg');
   }
   else if(imgnum == 1){
     imgnum = 5;
-    img.setAttribute('src', 'media/img'+imgnum+'.jpg');
   }
+  img.setAttribute('src', 'media/img'+imgnum+'.jpg');
 };
 button2.onclick = function(){
   if(imgnum < 5){
     imgnum += 1;
-    img.setAttribute('src', 'media/img'+imgnum+'.jpg');
   }
   else if(imgnum == 5){
     imgnum = 1;
-    img.setAttribute('src', 'media/img'+imgnum+'.jpg');
   }
+  img.setAttribute('src', 'media/img'+imgnum+'.jpg');
 };
+
+document.querySelector('#play').onclick = function(){
+  var myInt = setInterval(function (){
+    imgnum++;
+    if(imgnum == 5){
+      imgnum = 1;
+    }
+    img.setAttribute('src', 'media/img'+imgnum+'.jpg');
+  }, 1000);
+};
+
