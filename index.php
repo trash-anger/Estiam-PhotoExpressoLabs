@@ -32,7 +32,7 @@
       </div>
       <?php require('./template/footer.php'); ?>
       <script src="scripts/caroussel.js" charset="utf-8"></script>
-      <script src="scripts/ConnectAjax.js" charset="utf-8"></script>
+      <script src="scripts/ConnectAjaxjQuery.js" charset="utf-8"></script>
     </div>
   </body>
   </body>

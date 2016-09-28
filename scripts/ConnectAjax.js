@@ -1,5 +1,3 @@
-var form = document.querySelector('#form');
-
 function submitMyForm(){
   var mail = document.querySelector('#mail').value;
   var pwd = document.querySelector('#password').value;
@@ -21,6 +19,5 @@ function submitMyForm(){
         }
       }
   }
-
   return false;
 }
